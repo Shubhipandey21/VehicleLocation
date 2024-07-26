@@ -18,7 +18,7 @@ const App = () => {
   useEffect(() => {
     const fetchVehiclePosition = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/location');
+        const response = await axios.get('https://testbackend-4.onrender.com/api/location');
         const newPos = [response.data.latitude, response.data.longitude];
         setVehiclePosition(newPos);
         setRoute(prevRoute => [...prevRoute, newPos]);
